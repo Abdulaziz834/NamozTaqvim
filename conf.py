@@ -62,7 +62,7 @@ def ask_location(update, context):
 	update.message.reply_text('Salom', reply_markup=butt)
 
 def main():
-	up = Updater('', use_context=True)
+	up = Updater('TOKEN HERE!', use_context=True)
 
 	dp = up.dispatcher
 
