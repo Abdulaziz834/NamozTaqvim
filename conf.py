@@ -61,6 +61,9 @@ def ask_location(update, context):
 	butt = ReplyKeyboardMarkup([KeyboardButton('Send Location', request_location=True)])
 	update.message.reply_text('Salom', reply_markup=butt)
 
+def some_function():
+	pass
+	
 def main():
 	up = Updater('TOKEN HERE!', use_context=True)
 
