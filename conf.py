@@ -1,6 +1,6 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, constants
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext, ConversationHandler, MessageHandler, Filters
-#from time import time
+
 #GROUP_ID = -1001376670344
 #censor = ['fuck', 'jala', 'yiba', 'oneni', 'am', 'qoto', 'qo`to', 'dalba', 'ёбта', 'долба', 'ебан', 'сука', 'хуй', 'shit', 'damn', 'dick', 'pussy', 'suka']
 #domains = ['.com', '.net', '.org', '.ru', '.me', '.uz', '.gov', '.io']
@@ -43,8 +43,7 @@ from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, Callback
 #	elif is_banned(update.message.text, domains):
 #		context.bot.delete_message(chat_id=update.message.chat_id, message_id=update.message.message_id)
 #		context.bot.send_message(chat_id=GROUP_ID, text="<b>"+update.message.from_user.first_name + '</b>, don`t spread adverts here!', parse_mode='html')
-#
-#
+
 #def command_ban(update:Update, context:CallbackContext):
 #	user = update.message.from_user
 #	if not update.message.reply_to_message:
@@ -61,8 +60,8 @@ def ask_location(update, context):
 	butt = ReplyKeyboardMarkup([KeyboardButton('Send Location', request_location=True)])
 	update.message.reply_text('Salom', reply_markup=butt)
 
-def some_function():
-	pass
+def doubled_text(text):
+	return text + ' ' + text
 	
 def main():
 	up = Updater('TOKEN HERE!', use_context=True)
